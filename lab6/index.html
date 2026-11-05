@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Лаб 6 - CSS Animation</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <h1>Миний веб галерей</h1>
+        <p>CSS3 Animation болон Multimedia</p>
+        <button id="themeBtn" type="button"
+                aria-pressed="false">
+            🌙 Dark mode
+        </button>
+    </header>
+
+    <nav class="navbar" aria-label="Үндсэн цэс">
+        <a href="#home">Нүүр</a>
+        <a href="#gallery">Галерей</a>
+        <a href="#video">Видео</a>
+        <a href="#contact">Холбоо</a>
+    </nav>
+
+    <main id="home" class="container">
+
+        <section class="intro">
+            <h2>Манай галерейд тавтай морил!</h2>
+            <p>Зурган дээр хулганаа аваачиж,
+               Flip товчийг дарж үзээрэй.</p>
+        </section>
+
+        <section id="gallery">
+            <h2>Зургийн галерей</h2>
+
+            <div class="gallery">
+                <article class="card">
+                    <img src="img/photo1.jpg"
+                         alt="Байгалийн зураг 1">
+                    <h3>Байгаль</h3>
+                    <p>Гоёмсог байгалийн зураг.</p>
+                </article>
+
+                <article class="card">
+                    <img src="img/photo2.jpg"
+                         alt="Хотын зураг">
+                    <h3>Хот</h3>
+                    <p>Хотын үзэсгэлэнт орчин.</p>
+                </article>
+
+                <article class="card">
+                    <img src="img/photo3.jpg"
+                         alt="Уулын зураг">
+                    <h3>Уул</h3>
+                    <p>Өндөр уулсын дүр зураг.</p>
+                </article>
+
+                <article class="card">
+                    <img src="img/photo4.jpg"
+                         alt="Далайн зураг">
+                    <h3>Далай</h3>
+                    <p>Далайн үзэсгэлэн.</p>
+                </article>
+
+                <article class="card">
+                    <img src="img/photo5.jpg"
+                         alt="Ойн зураг">
+                    <h3>Ой мод</h3>
+                    <p>Ногоон байгалийн орчин.</p>
+                </article>
+
+                <article class="card">
+                    <img src="img/photo6.jpg"
+                         alt="Нар жаргах үе">
+                    <h3>Нар жаргах</h3>
+                    <p>Үдшийн гоёмсог өнгө.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="flip-section">
+            <h2>3D Flip Card</h2>
+            <div class="flip-card">
+                <div class="flip-inner">
+                    <div class="flip-front">
+                        <h3>HTML & CSS</h3>
+                        <p>3D картын урд тал</p>
+                    </div>
+                    <div class="flip-back">
+                        <h3>Амжилттай!</h3>
+                        <p>Карт 180 градус эргэлээ.</p>
+                    </div>
+                </div>
+                <button type="button" class="flip-btn"
+                        aria-pressed="false">
+                    Картыг эргүүлэх
+                </button>
+            </div>
+        </section>
+
+        <section id="video" class="media-section">
+            <h2>Multimedia хэсэг</h2>
+
+            <h3>Видео бичлэг</h3>
+            
+
+        
+                        <video controls preload="metadata" crossorigin="anonymous">
+    <source src="video/clip4.mp4" type="video/mp4">
+
+    <track
+        src="video/clip.mn.vtt"
+        kind="captions"
+        srclang="mn"
+        label="Монгол хадмал"
+        default>
+
+    Таны браузер видео дэмжихгүй байна.
+                </video>
+
+
+
+
+            <h3>Inline SVG</h3>
+            <svg width="100" height="100"
+                 viewBox="0 0 100 100"
+                 role="img"
+                 aria-label="Цэнхэр од">
+                <polygon
+                    points="50,5 61,35 95,35 68,55
+                            79,90 50,70 21,90
+                            32,55 5,35 39,35"
+                    fill="#3b82f6"/>
+            </svg>
+
+            <h3>Iframe</h3>
+            <iframe
+                title="OpenStreetMap газрын зураг"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=106.88%2C47.90%2C106.94%2C47.94&amp;layer=mapnik"
+                loading="lazy"
+                referrerpolicy="no-referrer">
+            </iframe>
+        </section>
+
+    </main>
+
+    <footer id="contact">
+        <p>2026 он | Веб зохиомж - Лаб 6</p>
+    </footer>
+</body>
+</html>
