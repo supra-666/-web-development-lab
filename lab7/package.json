@@ -1,0 +1,12 @@
+{
+  "name": "lab7",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "sass scss/style.scss style.css --style=compressed --no-source-map",
+    "watch": "sass --watch scss/style.scss:style.css"
+  },
+  "devDependencies": {
+    "sass": "^1.107.1"
+  }
+}
