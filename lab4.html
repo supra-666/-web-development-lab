@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лаборатори 4 - Flexbox ба Grid</title>
+    <link rel="stylesheet" href="lab4.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Миний веб сайт</h1>
+        <p>CSS Flexbox болон Grid ашигласан загвар</p>
+    </header>
+
+    <nav class="navbar">
+        <a href="#home">Нүүр</a>
+        <a href="#about">Бидний тухай</a>
+        <a href="#services">Үйлчилгээ</a>
+        <a href="#contact">Холбоо барих</a>
+    </nav>
+
+    <div class="layout">
+
+        <aside class="sidebar">
+            <h2>Хажуугийн цэс</h2>
+            <ul>
+                <li><a href="#home">Нүүр хуудас</a></li>
+                <li><a href="#news">Мэдээ мэдээлэл</a></li>
+                <li><a href="#services">Үйлчилгээ</a></li>
+                <li><a href="#contact">Холбоо барих</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content" id="home">
+            <h2>Манай веб хуудсанд тавтай морил</h2>
+            <p>Энэ веб сайт нь CSS Grid ашиглан
+               3 баганатай бүтэцтэй хийгдсэн.</p>
+
+            <section class="card-grid">
+                <article class="card" id="about">
+                    <h3>Бидний тухай</h3>
+                    <p>Манай байгууллагын танилцуулга.</p>
+                </article>
+
+                <article class="card" id="services">
+                    <h3>Үйлчилгээ</h3>
+                    <p>Бидний санал болгож буй үйлчилгээ.</p>
+                </article>
+
+                <article class="card" id="news">
+                    <h3>Мэдээ мэдээлэл</h3>
+                    <p>Сүүлийн үеийн мэдээ мэдээлэл.</p>
+                </article>
+
+                <article class="card">
+                    <h3>Сургалт</h3>
+                    <p>Веб зохиомжийн лабораторийн ажил.</p>
+                </article>
+
+                <article class="card">
+                    <h3>HTML</h3>
+                    <p>Веб хуудасны үндсэн бүтэц.</p>
+                </article>
+
+                <article class="card">
+                    <h3>CSS</h3>
+                    <p>Веб хуудасны дизайн, байрлал.</p>
+                </article>
+            </section>
+        </main>
+
+        <aside class="right-sidebar">
+            <h2>Нэмэлт мэдээлэл</h2>
+            <p>Лаборатори №4</p>
+            <p>HTML5 + CSS3</p>
+            <p>Flexbox болон Grid</p>
+        </aside>
+
+    </div>
+
+    <footer class="footer" id="contact">
+        <p>2026 он | Веб зохиомж - Лаборатори 4</p>
+    </footer>
+
+</body>
+</html>
