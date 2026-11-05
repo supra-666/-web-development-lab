@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="mn" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Лаб 8 - Bootstrap</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --brand: #2563eb;
+        }
+
+        .btn-brand {
+            --bs-btn-bg: var(--brand);
+            --bs-btn-border-color: var(--brand);
+            --bs-btn-color: #fff;
+            --bs-btn-hover-bg: #1d4ed8;
+            --bs-btn-hover-border-color: #1d4ed8;
+            --bs-btn-hover-color: #fff;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .gallery-card {
+            transition: transform 0.3s;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-primary text-white text-center py-5">
+        <h1>Миний веб галерей</h1>
+        <p>Bootstrap 5 ашигласан загвар</p>
+        <button class="btn btn-light" id="themeBtn">
+            Dark Mode
+        </button>
+    </header>
+
+    <nav class="navbar navbar-expand-md bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Галерей</a>
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainNav"
+                aria-controls="mainNav"
+                aria-expanded="false"
+                aria-label="Цэс нээх">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="#home">Нүүр</a>
+                    <a class="nav-link" href="#gallery">Зураг</a>
+                    <a class="nav-link" href="#form">Бүртгэл</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5" id="home">
+        <section class="text-center mb-5">
+            <h2>Манай галерейд тавтай морил!</h2>
+            <p>Bootstrap ашиглан хийсэн responsive веб сайт.</p>
+        </section>
+
+        <section id="gallery">
+            <h2 class="mb-4">Зургийн галерей</h2>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+                <div class="col">
+                    <article class="card gallery-card h-100">
+                        <img src="../lab6/img/photo1.jpg"
+                             class="card-img-top gallery-img"
+                             alt="Байгалийн зураг">
+                        <div class="card-body">
+                            <h3 class="h5">Байгаль</h3>
+                            <p>Үзэсгэлэнт байгаль.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="card gallery-card h-100">
+                        <img src="../lab6/img/photo2.jpg"
+                             class="card-img-top gallery-img"
+                             alt="Хотын зураг">
+                        <div class="card-body">
+                            <h3 class="h5">Хот</h3>
+                            <p>Орчин үеийн хот.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="card gallery-card h-100">
+                        <img src="../lab6/img/photo3.jpg"
+                             class="card-img-top gallery-img"
+                             alt="Уулын зураг">
+                        <div class="card-body">
+                            <h3 class="h5">Уул</h3>
+                            <p>Өндөр уулсын зураг.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="card gallery-card h-100">
+                        <img src="../lab6/img/photo4.jpg"
+                             class="card-img-top gallery-img"
+                             alt="Далайн зураг">
+                        <div class="card-body">
+                            <h3 class="h5">Далай</h3>
+                            <p>Далайн эргийн зураг.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="card gallery-card h-100">
+                        <img src="../lab6/img/photo5.jpg"
+                             class="card-img-top gallery-img"
+                             alt="Ойн зураг">
+                        <div class="card-body">
+                            <h3 class="h5">Ой мод</h3>
+                            <p>Ногоон байгаль.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="card gallery-card h-100">
+                        <img src="../lab6/img/photo6.jpg"
+                             class="card-img-top gallery-img"
+                             alt="Нар жаргах зураг">
+                        <div class="card-body">
+                            <h3 class="h5">Нар жаргах</h3>
+                            <p>Үдшийн үзэсгэлэнт өнгө.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="form" class="my-5">
+            <h2>Бүртгэлийн форм</h2>
+            <form class="needs-validation" novalidate>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Нэр</label>
+                    <input type="text" class="form-control"
+                           id="name" required>
+                    <div class="invalid-feedback">
+                        Нэрээ оруулна уу.
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Имэйл</label>
+                    <input type="email" class="form-control"
+                           id="email" required>
+                    <div class="invalid-feedback">
+                        Зөв имэйл оруулна уу.
+                    </div>
+                </div>
+
+                <button class="btn btn-brand" type="submit">
+                    Илгээх
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="bg-body-tertiary text-center py-4">
+        <p>2026 он | Лаб 8 - Bootstrap</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
